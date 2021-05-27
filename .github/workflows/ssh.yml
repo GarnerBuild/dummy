@@ -9,5 +9,6 @@ jobs:
     steps:
     - run: cat /etc/ssh/ssh_config
     - run: cat ~/.ssh/known_hosts || true
+    - run: ls -l /dev/tty /dev/console /dev/null
     - run: ssh -vvv gitlab.com || true
     - run: cat ~/.ssh/known_hosts || true
