@@ -10,6 +10,7 @@ jobs:
     - run: env
     - run: echo $$
     - run: ls -l /proc/$$/fd
+    - run: if [ -t 1 ] ; then echo terminal; else echo "not a terminal"; fi
     - run: cat /etc/ssh/ssh_config
     - run: cat ~/.ssh/known_hosts || true
     - run: ls -l /dev/tty /dev/console /dev/null
